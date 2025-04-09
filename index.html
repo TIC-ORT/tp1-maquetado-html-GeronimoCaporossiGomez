@@ -4,19 +4,52 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body class="fondo">
-    <header class="header">
-      <div class="encabezado">
-        <h1 class="fontImportante">Youtube 2</h1>
+    <div class="barraSuperior">
+      <div class="barraSuperior">
         <img src="media/logoprincipal.png" alt="Logo Principal" class="logo">
+        <input type="text" placeholder="Buscar..." class="barraBusqueda">
       </div>
-      <div class="subrayado"></div>
-    </header>
-    
-    <div class="videoContenedor">
-      <video controls width="720" class="videoPrincipal">
-        <source src="media/Video de Prueba.mp4" type="video/mp4">
-        Tu navegador no soporta la reproducción de video.
-      </video>
+      
     </div>
+
+    <div class="contenedorPrincipal">
+      <div class="menuLateral">
+        <ul>
+          <li>Inicio</li>
+          <li>Videos</li>
+          <li>Listas</li>
+          <li>Favoritos</li>
+        </ul>
+      </div>
+
+      <div class="contenido">
+        <div class="encabezado">
+          <h1 class="fontImportante">Youtube 2</h1>
+          <img src="media/logoprincipal.png" alt="Logo Principal" class="logo">
+        </div>
+        <div class="subrayado"></div>
+
+        <div class="videoContenedor">
+          <div class="flecha">&#9664;</div>
+          <video controls width="480" class="videoPrincipal">
+            <source src="media/Video de Prueba.mp4" type="video/mp4">
+            Tu navegador no soporta la reproducción de video.
+          </video>
+          <div class="flecha">&#9654;</div>
+        </div>
+
+        <div class="tonosFondo">
+          <div class="cuadroGris gris1"></div>
+          <div class="cuadroGris gris2"></div>
+          <div class="cuadroGris gris3"></div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="columna"></div>
+      <div class="columna"></div>
+      <div class="columna"></div>
+    </footer>
   </body>
 </html>
