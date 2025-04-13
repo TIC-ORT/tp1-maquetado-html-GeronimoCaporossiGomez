@@ -1,55 +1,79 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
   <head>
+    <meta charset="UTF-8">
+    <title>Youtube 2</title>
     <link rel="stylesheet" href="style.css">
   </head>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const video = document.getElementById('videoPrincipal');
+  
+      video.addEventListener('loadedmetadata', () => {
+        video.currentTime = 10;
+      });
+    });
+  </script>
+  
   <body class="fondo">
-    <div class="barraSuperior">
-      <div class="barraSuperior">
-        <img src="media/logoprincipal.png" alt="Logo Principal" class="logo">
-        <input type="text" placeholder="Buscar..." class="barraBusqueda">
-      </div>
-      
-    </div>
+    
+    <header class="barraSuperior">
+      <img src="media/logoprincipal.png" alt="Logo Principal" class="logo">
+      <input type="text" placeholder="Buscar..." class="barraBusqueda">
+    </header>
 
-    <div class="contenedorPrincipal">
-      <div class="menuLateral">
+    <main class="contenedorPrincipal">
+
+      <nav class="menuLateral">
         <ul>
           <li>Inicio</li>
           <li>Videos</li>
           <li>Listas</li>
           <li>Favoritos</li>
         </ul>
-      </div>
+      </nav>
 
-      <div class="contenido">
-        <div class="encabezado">
+      <section class="contenido">
+
+        <header class="encabezado">
           <h1 class="fontImportante">Youtube 2</h1>
           <img src="media/logoprincipal.png" alt="Logo Principal" class="logo">
-        </div>
+        </header>
+        
         <div class="subrayado"></div>
 
-        <div class="videoContenedor">
-          <div class="flecha">&#9664;</div>
-          <video controls width="480" class="videoPrincipal">
+        <section class="videoContenedor">
+          <button class="flecha" onclick="reiniciarVideo()">&#9664;</button>
+
+          <video id="videoPrincipal" controls width="720" class="videoPrincipal">
             <source src="media/Video de Prueba.mp4" type="video/mp4">
             Tu navegador no soporta la reproducción de video.
           </video>
-          <div class="flecha">&#9654;</div>
-        </div>
+          
 
-        <div class="tonosFondo">
+          <button class="flecha" onclick="reiniciarVideo()">&#9654;</button>
+        </section>
+
+        <section class="tonosFondo">
           <div class="cuadroGris gris1"></div>
           <div class="cuadroGris gris2"></div>
           <div class="cuadroGris gris3"></div>
-        </div>
-      </div>
-    </div>
+        </section>
 
-    <footer class="footer">
-      <div class="columna"></div>
-      <div class="columna"></div>
-      <div class="columna"></div>
+      </section>
+    </main>
+
+    <footer>
+    <!--no olvidarse de poner las boludeces aca-->
     </footer>
+
+    <script>
+      function reiniciarVideo() {
+        const video = document.getElementById("videoPrincipal");
+        video.currentTime = 10;
+        video.play();
+      }
+    </script>
+    
   </body>
 </html>
